@@ -92,8 +92,8 @@ elements.cloner.tick = function(pixel) {
     if (settings.survivalClone) {
         if (Math.random() < 0.025) {
             // 1 or -1
-            var x = pixel.x + (Math.random() < 0.5 ? 1 : -1);
-            var y = pixel.y + (Math.random() < 0.5 ? 1 : -1);
+            var x = pixel.x + (Math.random() < 0.5 ? 0.7 : -0.7);
+            var y = pixel.y + (Math.random() < 0.5 ? 0.7 : -0.7);
             if (isEmpty(x,y)) {
                 createPixel(settings.survivalClone,x,y);
             }
@@ -194,6 +194,7 @@ elementWorth = {
     "cell": -1,
     "cancer": -1,
     "foam": -1,
+    "rust": 0.2,
 }
 elements.sell = {
     color: ["#fff0b5","#ffe680","#c48821","#986a1a","#eca832","#f0bb62"],
@@ -220,6 +221,7 @@ Shop
     ~Dirt
     ~Water
     ~Seeds
+    ~Iron
     ~Sapling
     ~Pinecone
     ~Primordial Soup
@@ -236,6 +238,7 @@ survivalShop = {
     "water*25": 250,
     "ammonia*25": 500,
     "seeds*1": 500,
+    "iron*25": 750,
     "sapling*1": 500,
     "pinecone*1": 500,
     "tnt*25": 1000,
