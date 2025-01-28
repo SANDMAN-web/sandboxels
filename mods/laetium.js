@@ -62,7 +62,7 @@ elements.molten_laetium = {
     viscosity: 1.517,
     hidden: true,
     state: "liquid",
-    category: "molten",
+    category: "states",
 }
 
 elements.vaporized_laetium = {
